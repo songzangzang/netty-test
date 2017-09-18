@@ -1,0 +1,80 @@
+package com.test.netty.test3;
+
+import io.netty.channel.Channel;
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.SimpleChannelInboundHandler;
+import io.netty.channel.group.ChannelGroup;
+import io.netty.channel.group.DefaultChannelGroup;
+import io.netty.util.concurrent.GlobalEventExecutor;
+
+public class MyChanHandler extends SimpleChannelInboundHandler<String> {
+
+    /**
+     * 用来保存Channle对象
+     */
+    private static ChannelGroup channelGroup = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
+
+
+    @Override
+    protected void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
+
+        Channel channel = ctx.channel();
+
+        channelGroup.forEach(ch -> {
+            if (ch != channel) {
+                ch.writeAndFlush(channel.remoteAddress() + " 发送的消息 " + msg + "\n");
+            } else {
+                ch.writeAndFlush("【自己】" + msg);
+            }
+        });
+
+
+    }
+
+    @Override
+    public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
+
+        Channel channel = ctx.channel();
+
+        // 对连接全部Channel进行通知
+        channelGroup.writeAndFlush("【服务器】 - " + channel.remoteAddress() + "加入\n");
+
+        channelGroup.add(channel);
+
+    }
+
+    @Override
+    public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
+
+        Channel channel = ctx.channel();
+
+        channelGroup.writeAndFlush("【服务器】 - " + channel.remoteAddress() + "离开\n");
+
+    }
+
+    @Override
+    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+
+        Channel channel = ctx.channel();
+
+        channelGroup.writeAndFlush(channel.remoteAddress() + "上线\n");
+
+    }
+
+    @Override
+    public void channelInactive(ChannelHandlerContext ctx) throws Exception {
+
+        Channel channel = ctx.channel();
+
+        channelGroup.writeAndFlush(channel.remoteAddress() + "下线\n");
+
+    }
+
+    @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+
+        cause.printStackTrace();
+        ctx.close();
+
+    }
+}
