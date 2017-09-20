@@ -7,7 +7,7 @@ import io.netty.channel.group.ChannelGroup;
 import io.netty.channel.group.DefaultChannelGroup;
 import io.netty.util.concurrent.GlobalEventExecutor;
 
-public class MyChanHandler extends SimpleChannelInboundHandler<String> {
+public class MyChatServerHandler extends SimpleChannelInboundHandler<String> {
 
     /**
      * 用来保存Channle对象

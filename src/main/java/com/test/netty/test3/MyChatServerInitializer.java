@@ -10,7 +10,7 @@ import io.netty.util.CharsetUtil;
 
 import java.util.logging.SocketHandler;
 
-public class MyChatInitializer extends SimpleChannelInboundHandler<SocketHandler>{
+public class MyChatServerInitializer extends SimpleChannelInboundHandler<SocketHandler>{
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, SocketHandler msg) throws Exception {
@@ -20,7 +20,7 @@ public class MyChatInitializer extends SimpleChannelInboundHandler<SocketHandler
         pipeline.addLast(new DelimiterBasedFrameDecoder(4));
         pipeline.addLast(new StringEncoder(CharsetUtil.UTF_8));
         pipeline.addLast(new StringDecoder(CharsetUtil.UTF_8));
-        pipeline.addLast(new MyChanHandler());
+        pipeline.addLast(new MyChatServerHandler());
 
     }
 }
