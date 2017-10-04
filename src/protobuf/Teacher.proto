@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package protobuf;
+
+option java_package = "com.test.protobuf";
+option java_outer_classname = "DataInfo";
+
+message Teacher {
+    required string name = 1;
+    optional int32 age = 2;
+    optional string address = 3;
+}
+
