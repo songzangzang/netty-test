@@ -14,6 +14,1331 @@ public final class TestDataInfo {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface MyMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:protobuf.MyMessage)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .protobuf.MyMessage.DataType type = 1;</code>
+     */
+    boolean hasType();
+    /**
+     * <code>required .protobuf.MyMessage.DataType type = 1;</code>
+     */
+    com.test.netty.test6.TestDataInfo.MyMessage.DataType getType();
+
+    /**
+     * <code>optional .protobuf.Teacher teacher = 2;</code>
+     */
+    boolean hasTeacher();
+    /**
+     * <code>optional .protobuf.Teacher teacher = 2;</code>
+     */
+    com.test.netty.test6.TestDataInfo.Teacher getTeacher();
+    /**
+     * <code>optional .protobuf.Teacher teacher = 2;</code>
+     */
+    com.test.netty.test6.TestDataInfo.TeacherOrBuilder getTeacherOrBuilder();
+
+    /**
+     * <code>optional .protobuf.Student student = 3;</code>
+     */
+    boolean hasStudent();
+    /**
+     * <code>optional .protobuf.Student student = 3;</code>
+     */
+    com.test.netty.test6.TestDataInfo.Student getStudent();
+    /**
+     * <code>optional .protobuf.Student student = 3;</code>
+     */
+    com.test.netty.test6.TestDataInfo.StudentOrBuilder getStudentOrBuilder();
+
+    /**
+     * <code>optional .protobuf.God god = 4;</code>
+     */
+    boolean hasGod();
+    /**
+     * <code>optional .protobuf.God god = 4;</code>
+     */
+    com.test.netty.test6.TestDataInfo.God getGod();
+    /**
+     * <code>optional .protobuf.God god = 4;</code>
+     */
+    com.test.netty.test6.TestDataInfo.GodOrBuilder getGodOrBuilder();
+
+    public com.test.netty.test6.TestDataInfo.MyMessage.ObjMessageCase getObjMessageCase();
+  }
+  /**
+   * Protobuf type {@code protobuf.MyMessage}
+   */
+  public  static final class MyMessage extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:protobuf.MyMessage)
+      MyMessageOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MyMessage.newBuilder() to construct.
+    private MyMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MyMessage() {
+      type_ = 1;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MyMessage(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              com.test.netty.test6.TestDataInfo.MyMessage.DataType value = com.test.netty.test6.TestDataInfo.MyMessage.DataType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                type_ = rawValue;
+              }
+              break;
+            }
+            case 18: {
+              com.test.netty.test6.TestDataInfo.Teacher.Builder subBuilder = null;
+              if (objMessageCase_ == 2) {
+                subBuilder = ((com.test.netty.test6.TestDataInfo.Teacher) objMessage_).toBuilder();
+              }
+              objMessage_ =
+                  input.readMessage(com.test.netty.test6.TestDataInfo.Teacher.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.test.netty.test6.TestDataInfo.Teacher) objMessage_);
+                objMessage_ = subBuilder.buildPartial();
+              }
+              objMessageCase_ = 2;
+              break;
+            }
+            case 26: {
+              com.test.netty.test6.TestDataInfo.Student.Builder subBuilder = null;
+              if (objMessageCase_ == 3) {
+                subBuilder = ((com.test.netty.test6.TestDataInfo.Student) objMessage_).toBuilder();
+              }
+              objMessage_ =
+                  input.readMessage(com.test.netty.test6.TestDataInfo.Student.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.test.netty.test6.TestDataInfo.Student) objMessage_);
+                objMessage_ = subBuilder.buildPartial();
+              }
+              objMessageCase_ = 3;
+              break;
+            }
+            case 34: {
+              com.test.netty.test6.TestDataInfo.God.Builder subBuilder = null;
+              if (objMessageCase_ == 4) {
+                subBuilder = ((com.test.netty.test6.TestDataInfo.God) objMessage_).toBuilder();
+              }
+              objMessage_ =
+                  input.readMessage(com.test.netty.test6.TestDataInfo.God.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.test.netty.test6.TestDataInfo.God) objMessage_);
+                objMessage_ = subBuilder.buildPartial();
+              }
+              objMessageCase_ = 4;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.test.netty.test6.TestDataInfo.internal_static_protobuf_MyMessage_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.test.netty.test6.TestDataInfo.internal_static_protobuf_MyMessage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.test.netty.test6.TestDataInfo.MyMessage.class, com.test.netty.test6.TestDataInfo.MyMessage.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code protobuf.MyMessage.DataType}
+     */
+    public enum DataType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>TEACHER_TYPE = 1;</code>
+       */
+      TEACHER_TYPE(1),
+      /**
+       * <code>STUDENT_TYPE = 2;</code>
+       */
+      STUDENT_TYPE(2),
+      /**
+       * <code>GOD_TYPE = 3;</code>
+       */
+      GOD_TYPE(3),
+      ;
+
+      /**
+       * <code>TEACHER_TYPE = 1;</code>
+       */
+      public static final int TEACHER_TYPE_VALUE = 1;
+      /**
+       * <code>STUDENT_TYPE = 2;</code>
+       */
+      public static final int STUDENT_TYPE_VALUE = 2;
+      /**
+       * <code>GOD_TYPE = 3;</code>
+       */
+      public static final int GOD_TYPE_VALUE = 3;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static DataType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static DataType forNumber(int value) {
+        switch (value) {
+          case 1: return TEACHER_TYPE;
+          case 2: return STUDENT_TYPE;
+          case 3: return GOD_TYPE;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<DataType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          DataType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<DataType>() {
+              public DataType findValueByNumber(int number) {
+                return DataType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.test.netty.test6.TestDataInfo.MyMessage.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final DataType[] VALUES = values();
+
+      public static DataType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private DataType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:protobuf.MyMessage.DataType)
+    }
+
+    private int bitField0_;
+    private int objMessageCase_ = 0;
+    private java.lang.Object objMessage_;
+    public enum ObjMessageCase
+        implements com.google.protobuf.Internal.EnumLite {
+      TEACHER(2),
+      STUDENT(3),
+      GOD(4),
+      OBJMESSAGE_NOT_SET(0);
+      private final int value;
+      private ObjMessageCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ObjMessageCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ObjMessageCase forNumber(int value) {
+        switch (value) {
+          case 2: return TEACHER;
+          case 3: return STUDENT;
+          case 4: return GOD;
+          case 0: return OBJMESSAGE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ObjMessageCase
+    getObjMessageCase() {
+      return ObjMessageCase.forNumber(
+          objMessageCase_);
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private int type_;
+    /**
+     * <code>required .protobuf.MyMessage.DataType type = 1;</code>
+     */
+    public boolean hasType() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .protobuf.MyMessage.DataType type = 1;</code>
+     */
+    public com.test.netty.test6.TestDataInfo.MyMessage.DataType getType() {
+      com.test.netty.test6.TestDataInfo.MyMessage.DataType result = com.test.netty.test6.TestDataInfo.MyMessage.DataType.valueOf(type_);
+      return result == null ? com.test.netty.test6.TestDataInfo.MyMessage.DataType.TEACHER_TYPE : result;
+    }
+
+    public static final int TEACHER_FIELD_NUMBER = 2;
+    /**
+     * <code>optional .protobuf.Teacher teacher = 2;</code>
+     */
+    public boolean hasTeacher() {
+      return objMessageCase_ == 2;
+    }
+    /**
+     * <code>optional .protobuf.Teacher teacher = 2;</code>
+     */
+    public com.test.netty.test6.TestDataInfo.Teacher getTeacher() {
+      if (objMessageCase_ == 2) {
+         return (com.test.netty.test6.TestDataInfo.Teacher) objMessage_;
+      }
+      return com.test.netty.test6.TestDataInfo.Teacher.getDefaultInstance();
+    }
+    /**
+     * <code>optional .protobuf.Teacher teacher = 2;</code>
+     */
+    public com.test.netty.test6.TestDataInfo.TeacherOrBuilder getTeacherOrBuilder() {
+      if (objMessageCase_ == 2) {
+         return (com.test.netty.test6.TestDataInfo.Teacher) objMessage_;
+      }
+      return com.test.netty.test6.TestDataInfo.Teacher.getDefaultInstance();
+    }
+
+    public static final int STUDENT_FIELD_NUMBER = 3;
+    /**
+     * <code>optional .protobuf.Student student = 3;</code>
+     */
+    public boolean hasStudent() {
+      return objMessageCase_ == 3;
+    }
+    /**
+     * <code>optional .protobuf.Student student = 3;</code>
+     */
+    public com.test.netty.test6.TestDataInfo.Student getStudent() {
+      if (objMessageCase_ == 3) {
+         return (com.test.netty.test6.TestDataInfo.Student) objMessage_;
+      }
+      return com.test.netty.test6.TestDataInfo.Student.getDefaultInstance();
+    }
+    /**
+     * <code>optional .protobuf.Student student = 3;</code>
+     */
+    public com.test.netty.test6.TestDataInfo.StudentOrBuilder getStudentOrBuilder() {
+      if (objMessageCase_ == 3) {
+         return (com.test.netty.test6.TestDataInfo.Student) objMessage_;
+      }
+      return com.test.netty.test6.TestDataInfo.Student.getDefaultInstance();
+    }
+
+    public static final int GOD_FIELD_NUMBER = 4;
+    /**
+     * <code>optional .protobuf.God god = 4;</code>
+     */
+    public boolean hasGod() {
+      return objMessageCase_ == 4;
+    }
+    /**
+     * <code>optional .protobuf.God god = 4;</code>
+     */
+    public com.test.netty.test6.TestDataInfo.God getGod() {
+      if (objMessageCase_ == 4) {
+         return (com.test.netty.test6.TestDataInfo.God) objMessage_;
+      }
+      return com.test.netty.test6.TestDataInfo.God.getDefaultInstance();
+    }
+    /**
+     * <code>optional .protobuf.God god = 4;</code>
+     */
+    public com.test.netty.test6.TestDataInfo.GodOrBuilder getGodOrBuilder() {
+      if (objMessageCase_ == 4) {
+         return (com.test.netty.test6.TestDataInfo.God) objMessage_;
+      }
+      return com.test.netty.test6.TestDataInfo.God.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (hasTeacher()) {
+        if (!getTeacher().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, type_);
+      }
+      if (objMessageCase_ == 2) {
+        output.writeMessage(2, (com.test.netty.test6.TestDataInfo.Teacher) objMessage_);
+      }
+      if (objMessageCase_ == 3) {
+        output.writeMessage(3, (com.test.netty.test6.TestDataInfo.Student) objMessage_);
+      }
+      if (objMessageCase_ == 4) {
+        output.writeMessage(4, (com.test.netty.test6.TestDataInfo.God) objMessage_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, type_);
+      }
+      if (objMessageCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.test.netty.test6.TestDataInfo.Teacher) objMessage_);
+      }
+      if (objMessageCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (com.test.netty.test6.TestDataInfo.Student) objMessage_);
+      }
+      if (objMessageCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (com.test.netty.test6.TestDataInfo.God) objMessage_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.test.netty.test6.TestDataInfo.MyMessage)) {
+        return super.equals(obj);
+      }
+      com.test.netty.test6.TestDataInfo.MyMessage other = (com.test.netty.test6.TestDataInfo.MyMessage) obj;
+
+      boolean result = true;
+      result = result && (hasType() == other.hasType());
+      if (hasType()) {
+        result = result && type_ == other.type_;
+      }
+      result = result && getObjMessageCase().equals(
+          other.getObjMessageCase());
+      if (!result) return false;
+      switch (objMessageCase_) {
+        case 2:
+          result = result && getTeacher()
+              .equals(other.getTeacher());
+          break;
+        case 3:
+          result = result && getStudent()
+              .equals(other.getStudent());
+          break;
+        case 4:
+          result = result && getGod()
+              .equals(other.getGod());
+          break;
+        case 0:
+        default:
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasType()) {
+        hash = (37 * hash) + TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + type_;
+      }
+      switch (objMessageCase_) {
+        case 2:
+          hash = (37 * hash) + TEACHER_FIELD_NUMBER;
+          hash = (53 * hash) + getTeacher().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + STUDENT_FIELD_NUMBER;
+          hash = (53 * hash) + getStudent().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + GOD_FIELD_NUMBER;
+          hash = (53 * hash) + getGod().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.test.netty.test6.TestDataInfo.MyMessage parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.test.netty.test6.TestDataInfo.MyMessage parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.test.netty.test6.TestDataInfo.MyMessage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.test.netty.test6.TestDataInfo.MyMessage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.test.netty.test6.TestDataInfo.MyMessage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.test.netty.test6.TestDataInfo.MyMessage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.test.netty.test6.TestDataInfo.MyMessage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.test.netty.test6.TestDataInfo.MyMessage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.test.netty.test6.TestDataInfo.MyMessage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.test.netty.test6.TestDataInfo.MyMessage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.test.netty.test6.TestDataInfo.MyMessage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.test.netty.test6.TestDataInfo.MyMessage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.test.netty.test6.TestDataInfo.MyMessage prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code protobuf.MyMessage}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:protobuf.MyMessage)
+        com.test.netty.test6.TestDataInfo.MyMessageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.test.netty.test6.TestDataInfo.internal_static_protobuf_MyMessage_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.test.netty.test6.TestDataInfo.internal_static_protobuf_MyMessage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.test.netty.test6.TestDataInfo.MyMessage.class, com.test.netty.test6.TestDataInfo.MyMessage.Builder.class);
+      }
+
+      // Construct using com.test.netty.test6.TestDataInfo.MyMessage.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        type_ = 1;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        objMessageCase_ = 0;
+        objMessage_ = null;
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.test.netty.test6.TestDataInfo.internal_static_protobuf_MyMessage_descriptor;
+      }
+
+      public com.test.netty.test6.TestDataInfo.MyMessage getDefaultInstanceForType() {
+        return com.test.netty.test6.TestDataInfo.MyMessage.getDefaultInstance();
+      }
+
+      public com.test.netty.test6.TestDataInfo.MyMessage build() {
+        com.test.netty.test6.TestDataInfo.MyMessage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.test.netty.test6.TestDataInfo.MyMessage buildPartial() {
+        com.test.netty.test6.TestDataInfo.MyMessage result = new com.test.netty.test6.TestDataInfo.MyMessage(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.type_ = type_;
+        if (objMessageCase_ == 2) {
+          if (teacherBuilder_ == null) {
+            result.objMessage_ = objMessage_;
+          } else {
+            result.objMessage_ = teacherBuilder_.build();
+          }
+        }
+        if (objMessageCase_ == 3) {
+          if (studentBuilder_ == null) {
+            result.objMessage_ = objMessage_;
+          } else {
+            result.objMessage_ = studentBuilder_.build();
+          }
+        }
+        if (objMessageCase_ == 4) {
+          if (godBuilder_ == null) {
+            result.objMessage_ = objMessage_;
+          } else {
+            result.objMessage_ = godBuilder_.build();
+          }
+        }
+        result.bitField0_ = to_bitField0_;
+        result.objMessageCase_ = objMessageCase_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.test.netty.test6.TestDataInfo.MyMessage) {
+          return mergeFrom((com.test.netty.test6.TestDataInfo.MyMessage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.test.netty.test6.TestDataInfo.MyMessage other) {
+        if (other == com.test.netty.test6.TestDataInfo.MyMessage.getDefaultInstance()) return this;
+        if (other.hasType()) {
+          setType(other.getType());
+        }
+        switch (other.getObjMessageCase()) {
+          case TEACHER: {
+            mergeTeacher(other.getTeacher());
+            break;
+          }
+          case STUDENT: {
+            mergeStudent(other.getStudent());
+            break;
+          }
+          case GOD: {
+            mergeGod(other.getGod());
+            break;
+          }
+          case OBJMESSAGE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasType()) {
+          return false;
+        }
+        if (hasTeacher()) {
+          if (!getTeacher().isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.test.netty.test6.TestDataInfo.MyMessage parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.test.netty.test6.TestDataInfo.MyMessage) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int objMessageCase_ = 0;
+      private java.lang.Object objMessage_;
+      public ObjMessageCase
+          getObjMessageCase() {
+        return ObjMessageCase.forNumber(
+            objMessageCase_);
+      }
+
+      public Builder clearObjMessage() {
+        objMessageCase_ = 0;
+        objMessage_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private int type_ = 1;
+      /**
+       * <code>required .protobuf.MyMessage.DataType type = 1;</code>
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .protobuf.MyMessage.DataType type = 1;</code>
+       */
+      public com.test.netty.test6.TestDataInfo.MyMessage.DataType getType() {
+        com.test.netty.test6.TestDataInfo.MyMessage.DataType result = com.test.netty.test6.TestDataInfo.MyMessage.DataType.valueOf(type_);
+        return result == null ? com.test.netty.test6.TestDataInfo.MyMessage.DataType.TEACHER_TYPE : result;
+      }
+      /**
+       * <code>required .protobuf.MyMessage.DataType type = 1;</code>
+       */
+      public Builder setType(com.test.netty.test6.TestDataInfo.MyMessage.DataType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .protobuf.MyMessage.DataType type = 1;</code>
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        type_ = 1;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.test.netty.test6.TestDataInfo.Teacher, com.test.netty.test6.TestDataInfo.Teacher.Builder, com.test.netty.test6.TestDataInfo.TeacherOrBuilder> teacherBuilder_;
+      /**
+       * <code>optional .protobuf.Teacher teacher = 2;</code>
+       */
+      public boolean hasTeacher() {
+        return objMessageCase_ == 2;
+      }
+      /**
+       * <code>optional .protobuf.Teacher teacher = 2;</code>
+       */
+      public com.test.netty.test6.TestDataInfo.Teacher getTeacher() {
+        if (teacherBuilder_ == null) {
+          if (objMessageCase_ == 2) {
+            return (com.test.netty.test6.TestDataInfo.Teacher) objMessage_;
+          }
+          return com.test.netty.test6.TestDataInfo.Teacher.getDefaultInstance();
+        } else {
+          if (objMessageCase_ == 2) {
+            return teacherBuilder_.getMessage();
+          }
+          return com.test.netty.test6.TestDataInfo.Teacher.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .protobuf.Teacher teacher = 2;</code>
+       */
+      public Builder setTeacher(com.test.netty.test6.TestDataInfo.Teacher value) {
+        if (teacherBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          objMessage_ = value;
+          onChanged();
+        } else {
+          teacherBuilder_.setMessage(value);
+        }
+        objMessageCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>optional .protobuf.Teacher teacher = 2;</code>
+       */
+      public Builder setTeacher(
+          com.test.netty.test6.TestDataInfo.Teacher.Builder builderForValue) {
+        if (teacherBuilder_ == null) {
+          objMessage_ = builderForValue.build();
+          onChanged();
+        } else {
+          teacherBuilder_.setMessage(builderForValue.build());
+        }
+        objMessageCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>optional .protobuf.Teacher teacher = 2;</code>
+       */
+      public Builder mergeTeacher(com.test.netty.test6.TestDataInfo.Teacher value) {
+        if (teacherBuilder_ == null) {
+          if (objMessageCase_ == 2 &&
+              objMessage_ != com.test.netty.test6.TestDataInfo.Teacher.getDefaultInstance()) {
+            objMessage_ = com.test.netty.test6.TestDataInfo.Teacher.newBuilder((com.test.netty.test6.TestDataInfo.Teacher) objMessage_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            objMessage_ = value;
+          }
+          onChanged();
+        } else {
+          if (objMessageCase_ == 2) {
+            teacherBuilder_.mergeFrom(value);
+          }
+          teacherBuilder_.setMessage(value);
+        }
+        objMessageCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>optional .protobuf.Teacher teacher = 2;</code>
+       */
+      public Builder clearTeacher() {
+        if (teacherBuilder_ == null) {
+          if (objMessageCase_ == 2) {
+            objMessageCase_ = 0;
+            objMessage_ = null;
+            onChanged();
+          }
+        } else {
+          if (objMessageCase_ == 2) {
+            objMessageCase_ = 0;
+            objMessage_ = null;
+          }
+          teacherBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .protobuf.Teacher teacher = 2;</code>
+       */
+      public com.test.netty.test6.TestDataInfo.Teacher.Builder getTeacherBuilder() {
+        return getTeacherFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .protobuf.Teacher teacher = 2;</code>
+       */
+      public com.test.netty.test6.TestDataInfo.TeacherOrBuilder getTeacherOrBuilder() {
+        if ((objMessageCase_ == 2) && (teacherBuilder_ != null)) {
+          return teacherBuilder_.getMessageOrBuilder();
+        } else {
+          if (objMessageCase_ == 2) {
+            return (com.test.netty.test6.TestDataInfo.Teacher) objMessage_;
+          }
+          return com.test.netty.test6.TestDataInfo.Teacher.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .protobuf.Teacher teacher = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.test.netty.test6.TestDataInfo.Teacher, com.test.netty.test6.TestDataInfo.Teacher.Builder, com.test.netty.test6.TestDataInfo.TeacherOrBuilder> 
+          getTeacherFieldBuilder() {
+        if (teacherBuilder_ == null) {
+          if (!(objMessageCase_ == 2)) {
+            objMessage_ = com.test.netty.test6.TestDataInfo.Teacher.getDefaultInstance();
+          }
+          teacherBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.test.netty.test6.TestDataInfo.Teacher, com.test.netty.test6.TestDataInfo.Teacher.Builder, com.test.netty.test6.TestDataInfo.TeacherOrBuilder>(
+                  (com.test.netty.test6.TestDataInfo.Teacher) objMessage_,
+                  getParentForChildren(),
+                  isClean());
+          objMessage_ = null;
+        }
+        objMessageCase_ = 2;
+        onChanged();;
+        return teacherBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.test.netty.test6.TestDataInfo.Student, com.test.netty.test6.TestDataInfo.Student.Builder, com.test.netty.test6.TestDataInfo.StudentOrBuilder> studentBuilder_;
+      /**
+       * <code>optional .protobuf.Student student = 3;</code>
+       */
+      public boolean hasStudent() {
+        return objMessageCase_ == 3;
+      }
+      /**
+       * <code>optional .protobuf.Student student = 3;</code>
+       */
+      public com.test.netty.test6.TestDataInfo.Student getStudent() {
+        if (studentBuilder_ == null) {
+          if (objMessageCase_ == 3) {
+            return (com.test.netty.test6.TestDataInfo.Student) objMessage_;
+          }
+          return com.test.netty.test6.TestDataInfo.Student.getDefaultInstance();
+        } else {
+          if (objMessageCase_ == 3) {
+            return studentBuilder_.getMessage();
+          }
+          return com.test.netty.test6.TestDataInfo.Student.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .protobuf.Student student = 3;</code>
+       */
+      public Builder setStudent(com.test.netty.test6.TestDataInfo.Student value) {
+        if (studentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          objMessage_ = value;
+          onChanged();
+        } else {
+          studentBuilder_.setMessage(value);
+        }
+        objMessageCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>optional .protobuf.Student student = 3;</code>
+       */
+      public Builder setStudent(
+          com.test.netty.test6.TestDataInfo.Student.Builder builderForValue) {
+        if (studentBuilder_ == null) {
+          objMessage_ = builderForValue.build();
+          onChanged();
+        } else {
+          studentBuilder_.setMessage(builderForValue.build());
+        }
+        objMessageCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>optional .protobuf.Student student = 3;</code>
+       */
+      public Builder mergeStudent(com.test.netty.test6.TestDataInfo.Student value) {
+        if (studentBuilder_ == null) {
+          if (objMessageCase_ == 3 &&
+              objMessage_ != com.test.netty.test6.TestDataInfo.Student.getDefaultInstance()) {
+            objMessage_ = com.test.netty.test6.TestDataInfo.Student.newBuilder((com.test.netty.test6.TestDataInfo.Student) objMessage_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            objMessage_ = value;
+          }
+          onChanged();
+        } else {
+          if (objMessageCase_ == 3) {
+            studentBuilder_.mergeFrom(value);
+          }
+          studentBuilder_.setMessage(value);
+        }
+        objMessageCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>optional .protobuf.Student student = 3;</code>
+       */
+      public Builder clearStudent() {
+        if (studentBuilder_ == null) {
+          if (objMessageCase_ == 3) {
+            objMessageCase_ = 0;
+            objMessage_ = null;
+            onChanged();
+          }
+        } else {
+          if (objMessageCase_ == 3) {
+            objMessageCase_ = 0;
+            objMessage_ = null;
+          }
+          studentBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .protobuf.Student student = 3;</code>
+       */
+      public com.test.netty.test6.TestDataInfo.Student.Builder getStudentBuilder() {
+        return getStudentFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .protobuf.Student student = 3;</code>
+       */
+      public com.test.netty.test6.TestDataInfo.StudentOrBuilder getStudentOrBuilder() {
+        if ((objMessageCase_ == 3) && (studentBuilder_ != null)) {
+          return studentBuilder_.getMessageOrBuilder();
+        } else {
+          if (objMessageCase_ == 3) {
+            return (com.test.netty.test6.TestDataInfo.Student) objMessage_;
+          }
+          return com.test.netty.test6.TestDataInfo.Student.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .protobuf.Student student = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.test.netty.test6.TestDataInfo.Student, com.test.netty.test6.TestDataInfo.Student.Builder, com.test.netty.test6.TestDataInfo.StudentOrBuilder> 
+          getStudentFieldBuilder() {
+        if (studentBuilder_ == null) {
+          if (!(objMessageCase_ == 3)) {
+            objMessage_ = com.test.netty.test6.TestDataInfo.Student.getDefaultInstance();
+          }
+          studentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.test.netty.test6.TestDataInfo.Student, com.test.netty.test6.TestDataInfo.Student.Builder, com.test.netty.test6.TestDataInfo.StudentOrBuilder>(
+                  (com.test.netty.test6.TestDataInfo.Student) objMessage_,
+                  getParentForChildren(),
+                  isClean());
+          objMessage_ = null;
+        }
+        objMessageCase_ = 3;
+        onChanged();;
+        return studentBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.test.netty.test6.TestDataInfo.God, com.test.netty.test6.TestDataInfo.God.Builder, com.test.netty.test6.TestDataInfo.GodOrBuilder> godBuilder_;
+      /**
+       * <code>optional .protobuf.God god = 4;</code>
+       */
+      public boolean hasGod() {
+        return objMessageCase_ == 4;
+      }
+      /**
+       * <code>optional .protobuf.God god = 4;</code>
+       */
+      public com.test.netty.test6.TestDataInfo.God getGod() {
+        if (godBuilder_ == null) {
+          if (objMessageCase_ == 4) {
+            return (com.test.netty.test6.TestDataInfo.God) objMessage_;
+          }
+          return com.test.netty.test6.TestDataInfo.God.getDefaultInstance();
+        } else {
+          if (objMessageCase_ == 4) {
+            return godBuilder_.getMessage();
+          }
+          return com.test.netty.test6.TestDataInfo.God.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .protobuf.God god = 4;</code>
+       */
+      public Builder setGod(com.test.netty.test6.TestDataInfo.God value) {
+        if (godBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          objMessage_ = value;
+          onChanged();
+        } else {
+          godBuilder_.setMessage(value);
+        }
+        objMessageCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>optional .protobuf.God god = 4;</code>
+       */
+      public Builder setGod(
+          com.test.netty.test6.TestDataInfo.God.Builder builderForValue) {
+        if (godBuilder_ == null) {
+          objMessage_ = builderForValue.build();
+          onChanged();
+        } else {
+          godBuilder_.setMessage(builderForValue.build());
+        }
+        objMessageCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>optional .protobuf.God god = 4;</code>
+       */
+      public Builder mergeGod(com.test.netty.test6.TestDataInfo.God value) {
+        if (godBuilder_ == null) {
+          if (objMessageCase_ == 4 &&
+              objMessage_ != com.test.netty.test6.TestDataInfo.God.getDefaultInstance()) {
+            objMessage_ = com.test.netty.test6.TestDataInfo.God.newBuilder((com.test.netty.test6.TestDataInfo.God) objMessage_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            objMessage_ = value;
+          }
+          onChanged();
+        } else {
+          if (objMessageCase_ == 4) {
+            godBuilder_.mergeFrom(value);
+          }
+          godBuilder_.setMessage(value);
+        }
+        objMessageCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>optional .protobuf.God god = 4;</code>
+       */
+      public Builder clearGod() {
+        if (godBuilder_ == null) {
+          if (objMessageCase_ == 4) {
+            objMessageCase_ = 0;
+            objMessage_ = null;
+            onChanged();
+          }
+        } else {
+          if (objMessageCase_ == 4) {
+            objMessageCase_ = 0;
+            objMessage_ = null;
+          }
+          godBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .protobuf.God god = 4;</code>
+       */
+      public com.test.netty.test6.TestDataInfo.God.Builder getGodBuilder() {
+        return getGodFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .protobuf.God god = 4;</code>
+       */
+      public com.test.netty.test6.TestDataInfo.GodOrBuilder getGodOrBuilder() {
+        if ((objMessageCase_ == 4) && (godBuilder_ != null)) {
+          return godBuilder_.getMessageOrBuilder();
+        } else {
+          if (objMessageCase_ == 4) {
+            return (com.test.netty.test6.TestDataInfo.God) objMessage_;
+          }
+          return com.test.netty.test6.TestDataInfo.God.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .protobuf.God god = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.test.netty.test6.TestDataInfo.God, com.test.netty.test6.TestDataInfo.God.Builder, com.test.netty.test6.TestDataInfo.GodOrBuilder> 
+          getGodFieldBuilder() {
+        if (godBuilder_ == null) {
+          if (!(objMessageCase_ == 4)) {
+            objMessage_ = com.test.netty.test6.TestDataInfo.God.getDefaultInstance();
+          }
+          godBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.test.netty.test6.TestDataInfo.God, com.test.netty.test6.TestDataInfo.God.Builder, com.test.netty.test6.TestDataInfo.GodOrBuilder>(
+                  (com.test.netty.test6.TestDataInfo.God) objMessage_,
+                  getParentForChildren(),
+                  isClean());
+          objMessage_ = null;
+        }
+        objMessageCase_ = 4;
+        onChanged();;
+        return godBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:protobuf.MyMessage)
+    }
+
+    // @@protoc_insertion_point(class_scope:protobuf.MyMessage)
+    private static final com.test.netty.test6.TestDataInfo.MyMessage DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.test.netty.test6.TestDataInfo.MyMessage();
+    }
+
+    public static com.test.netty.test6.TestDataInfo.MyMessage getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<MyMessage>
+        PARSER = new com.google.protobuf.AbstractParser<MyMessage>() {
+      public MyMessage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new MyMessage(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MyMessage> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MyMessage> getParserForType() {
+      return PARSER;
+    }
+
+    public com.test.netty.test6.TestDataInfo.MyMessage getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface TeacherOrBuilder extends
       // @@protoc_insertion_point(interface_extends:protobuf.Teacher)
       com.google.protobuf.MessageOrBuilder {
@@ -828,11 +2153,1640 @@ public final class TestDataInfo {
 
   }
 
+  public interface StudentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:protobuf.Student)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    boolean hasName();
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>optional int32 age = 2;</code>
+     */
+    boolean hasAge();
+    /**
+     * <code>optional int32 age = 2;</code>
+     */
+    int getAge();
+
+    /**
+     * <code>optional string address = 3;</code>
+     */
+    boolean hasAddress();
+    /**
+     * <code>optional string address = 3;</code>
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>optional string address = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * Protobuf type {@code protobuf.Student}
+   */
+  public  static final class Student extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:protobuf.Student)
+      StudentOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Student.newBuilder() to construct.
+    private Student(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Student() {
+      name_ = "";
+      age_ = 0;
+      address_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Student(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              name_ = bs;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              age_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              address_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.test.netty.test6.TestDataInfo.internal_static_protobuf_Student_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.test.netty.test6.TestDataInfo.internal_static_protobuf_Student_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.test.netty.test6.TestDataInfo.Student.class, com.test.netty.test6.TestDataInfo.Student.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AGE_FIELD_NUMBER = 2;
+    private int age_;
+    /**
+     * <code>optional int32 age = 2;</code>
+     */
+    public boolean hasAge() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 age = 2;</code>
+     */
+    public int getAge() {
+      return age_;
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 3;
+    private volatile java.lang.Object address_;
+    /**
+     * <code>optional string address = 3;</code>
+     */
+    public boolean hasAddress() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional string address = 3;</code>
+     */
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          address_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string address = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, age_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, address_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, age_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, address_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.test.netty.test6.TestDataInfo.Student)) {
+        return super.equals(obj);
+      }
+      com.test.netty.test6.TestDataInfo.Student other = (com.test.netty.test6.TestDataInfo.Student) obj;
+
+      boolean result = true;
+      result = result && (hasName() == other.hasName());
+      if (hasName()) {
+        result = result && getName()
+            .equals(other.getName());
+      }
+      result = result && (hasAge() == other.hasAge());
+      if (hasAge()) {
+        result = result && (getAge()
+            == other.getAge());
+      }
+      result = result && (hasAddress() == other.hasAddress());
+      if (hasAddress()) {
+        result = result && getAddress()
+            .equals(other.getAddress());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasName()) {
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+      }
+      if (hasAge()) {
+        hash = (37 * hash) + AGE_FIELD_NUMBER;
+        hash = (53 * hash) + getAge();
+      }
+      if (hasAddress()) {
+        hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getAddress().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.test.netty.test6.TestDataInfo.Student parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.test.netty.test6.TestDataInfo.Student parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.test.netty.test6.TestDataInfo.Student parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.test.netty.test6.TestDataInfo.Student parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.test.netty.test6.TestDataInfo.Student parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.test.netty.test6.TestDataInfo.Student parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.test.netty.test6.TestDataInfo.Student parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.test.netty.test6.TestDataInfo.Student parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.test.netty.test6.TestDataInfo.Student parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.test.netty.test6.TestDataInfo.Student parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.test.netty.test6.TestDataInfo.Student parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.test.netty.test6.TestDataInfo.Student parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.test.netty.test6.TestDataInfo.Student prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code protobuf.Student}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:protobuf.Student)
+        com.test.netty.test6.TestDataInfo.StudentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.test.netty.test6.TestDataInfo.internal_static_protobuf_Student_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.test.netty.test6.TestDataInfo.internal_static_protobuf_Student_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.test.netty.test6.TestDataInfo.Student.class, com.test.netty.test6.TestDataInfo.Student.Builder.class);
+      }
+
+      // Construct using com.test.netty.test6.TestDataInfo.Student.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        age_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        address_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.test.netty.test6.TestDataInfo.internal_static_protobuf_Student_descriptor;
+      }
+
+      public com.test.netty.test6.TestDataInfo.Student getDefaultInstanceForType() {
+        return com.test.netty.test6.TestDataInfo.Student.getDefaultInstance();
+      }
+
+      public com.test.netty.test6.TestDataInfo.Student build() {
+        com.test.netty.test6.TestDataInfo.Student result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.test.netty.test6.TestDataInfo.Student buildPartial() {
+        com.test.netty.test6.TestDataInfo.Student result = new com.test.netty.test6.TestDataInfo.Student(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.name_ = name_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.age_ = age_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.address_ = address_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.test.netty.test6.TestDataInfo.Student) {
+          return mergeFrom((com.test.netty.test6.TestDataInfo.Student)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.test.netty.test6.TestDataInfo.Student other) {
+        if (other == com.test.netty.test6.TestDataInfo.Student.getDefaultInstance()) return this;
+        if (other.hasName()) {
+          bitField0_ |= 0x00000001;
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasAge()) {
+          setAge(other.getAge());
+        }
+        if (other.hasAddress()) {
+          bitField0_ |= 0x00000004;
+          address_ = other.address_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.test.netty.test6.TestDataInfo.Student parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.test.netty.test6.TestDataInfo.Student) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int age_ ;
+      /**
+       * <code>optional int32 age = 2;</code>
+       */
+      public boolean hasAge() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 age = 2;</code>
+       */
+      public int getAge() {
+        return age_;
+      }
+      /**
+       * <code>optional int32 age = 2;</code>
+       */
+      public Builder setAge(int value) {
+        bitField0_ |= 0x00000002;
+        age_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 age = 2;</code>
+       */
+      public Builder clearAge() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        age_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>optional string address = 3;</code>
+       */
+      public boolean hasAddress() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string address = 3;</code>
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            address_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string address = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string address = 3;</code>
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        address_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string address = 3;</code>
+       */
+      public Builder clearAddress() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        address_ = getDefaultInstance().getAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string address = 3;</code>
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        address_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:protobuf.Student)
+    }
+
+    // @@protoc_insertion_point(class_scope:protobuf.Student)
+    private static final com.test.netty.test6.TestDataInfo.Student DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.test.netty.test6.TestDataInfo.Student();
+    }
+
+    public static com.test.netty.test6.TestDataInfo.Student getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<Student>
+        PARSER = new com.google.protobuf.AbstractParser<Student>() {
+      public Student parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Student(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Student> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Student> getParserForType() {
+      return PARSER;
+    }
+
+    public com.test.netty.test6.TestDataInfo.Student getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GodOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:protobuf.God)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    boolean hasName();
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>optional int32 age = 2;</code>
+     */
+    boolean hasAge();
+    /**
+     * <code>optional int32 age = 2;</code>
+     */
+    int getAge();
+
+    /**
+     * <code>optional string address = 3;</code>
+     */
+    boolean hasAddress();
+    /**
+     * <code>optional string address = 3;</code>
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>optional string address = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * Protobuf type {@code protobuf.God}
+   */
+  public  static final class God extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:protobuf.God)
+      GodOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use God.newBuilder() to construct.
+    private God(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private God() {
+      name_ = "";
+      age_ = 0;
+      address_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private God(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              name_ = bs;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              age_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              address_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.test.netty.test6.TestDataInfo.internal_static_protobuf_God_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.test.netty.test6.TestDataInfo.internal_static_protobuf_God_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.test.netty.test6.TestDataInfo.God.class, com.test.netty.test6.TestDataInfo.God.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AGE_FIELD_NUMBER = 2;
+    private int age_;
+    /**
+     * <code>optional int32 age = 2;</code>
+     */
+    public boolean hasAge() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 age = 2;</code>
+     */
+    public int getAge() {
+      return age_;
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 3;
+    private volatile java.lang.Object address_;
+    /**
+     * <code>optional string address = 3;</code>
+     */
+    public boolean hasAddress() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional string address = 3;</code>
+     */
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          address_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string address = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, age_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, address_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, age_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, address_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.test.netty.test6.TestDataInfo.God)) {
+        return super.equals(obj);
+      }
+      com.test.netty.test6.TestDataInfo.God other = (com.test.netty.test6.TestDataInfo.God) obj;
+
+      boolean result = true;
+      result = result && (hasName() == other.hasName());
+      if (hasName()) {
+        result = result && getName()
+            .equals(other.getName());
+      }
+      result = result && (hasAge() == other.hasAge());
+      if (hasAge()) {
+        result = result && (getAge()
+            == other.getAge());
+      }
+      result = result && (hasAddress() == other.hasAddress());
+      if (hasAddress()) {
+        result = result && getAddress()
+            .equals(other.getAddress());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasName()) {
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+      }
+      if (hasAge()) {
+        hash = (37 * hash) + AGE_FIELD_NUMBER;
+        hash = (53 * hash) + getAge();
+      }
+      if (hasAddress()) {
+        hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getAddress().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.test.netty.test6.TestDataInfo.God parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.test.netty.test6.TestDataInfo.God parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.test.netty.test6.TestDataInfo.God parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.test.netty.test6.TestDataInfo.God parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.test.netty.test6.TestDataInfo.God parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.test.netty.test6.TestDataInfo.God parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.test.netty.test6.TestDataInfo.God parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.test.netty.test6.TestDataInfo.God parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.test.netty.test6.TestDataInfo.God parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.test.netty.test6.TestDataInfo.God parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.test.netty.test6.TestDataInfo.God parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.test.netty.test6.TestDataInfo.God parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.test.netty.test6.TestDataInfo.God prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code protobuf.God}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:protobuf.God)
+        com.test.netty.test6.TestDataInfo.GodOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.test.netty.test6.TestDataInfo.internal_static_protobuf_God_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.test.netty.test6.TestDataInfo.internal_static_protobuf_God_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.test.netty.test6.TestDataInfo.God.class, com.test.netty.test6.TestDataInfo.God.Builder.class);
+      }
+
+      // Construct using com.test.netty.test6.TestDataInfo.God.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        age_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        address_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.test.netty.test6.TestDataInfo.internal_static_protobuf_God_descriptor;
+      }
+
+      public com.test.netty.test6.TestDataInfo.God getDefaultInstanceForType() {
+        return com.test.netty.test6.TestDataInfo.God.getDefaultInstance();
+      }
+
+      public com.test.netty.test6.TestDataInfo.God build() {
+        com.test.netty.test6.TestDataInfo.God result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.test.netty.test6.TestDataInfo.God buildPartial() {
+        com.test.netty.test6.TestDataInfo.God result = new com.test.netty.test6.TestDataInfo.God(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.name_ = name_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.age_ = age_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.address_ = address_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.test.netty.test6.TestDataInfo.God) {
+          return mergeFrom((com.test.netty.test6.TestDataInfo.God)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.test.netty.test6.TestDataInfo.God other) {
+        if (other == com.test.netty.test6.TestDataInfo.God.getDefaultInstance()) return this;
+        if (other.hasName()) {
+          bitField0_ |= 0x00000001;
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasAge()) {
+          setAge(other.getAge());
+        }
+        if (other.hasAddress()) {
+          bitField0_ |= 0x00000004;
+          address_ = other.address_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.test.netty.test6.TestDataInfo.God parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.test.netty.test6.TestDataInfo.God) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int age_ ;
+      /**
+       * <code>optional int32 age = 2;</code>
+       */
+      public boolean hasAge() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 age = 2;</code>
+       */
+      public int getAge() {
+        return age_;
+      }
+      /**
+       * <code>optional int32 age = 2;</code>
+       */
+      public Builder setAge(int value) {
+        bitField0_ |= 0x00000002;
+        age_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 age = 2;</code>
+       */
+      public Builder clearAge() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        age_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>optional string address = 3;</code>
+       */
+      public boolean hasAddress() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string address = 3;</code>
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            address_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string address = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string address = 3;</code>
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        address_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string address = 3;</code>
+       */
+      public Builder clearAddress() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        address_ = getDefaultInstance().getAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string address = 3;</code>
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        address_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:protobuf.God)
+    }
+
+    // @@protoc_insertion_point(class_scope:protobuf.God)
+    private static final com.test.netty.test6.TestDataInfo.God DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.test.netty.test6.TestDataInfo.God();
+    }
+
+    public static com.test.netty.test6.TestDataInfo.God getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<God>
+        PARSER = new com.google.protobuf.AbstractParser<God>() {
+      public God parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new God(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<God> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<God> getParserForType() {
+      return PARSER;
+    }
+
+    public com.test.netty.test6.TestDataInfo.God getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_protobuf_MyMessage_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_protobuf_MyMessage_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_protobuf_Teacher_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_protobuf_Teacher_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_protobuf_Student_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_protobuf_Student_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_protobuf_God_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_protobuf_God_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -842,10 +3796,18 @@ public final class TestDataInfo {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032src/protobuf/SixTest.proto\022\010protobuf\"5" +
+      "\n\032src/protobuf/SixTest.proto\022\010protobuf\"\355" +
+      "\001\n\tMyMessage\022*\n\004type\030\001 \002(\0162\034.protobuf.My" +
+      "Message.DataType\022$\n\007teacher\030\002 \001(\0132\021.prot" +
+      "obuf.TeacherH\000\022$\n\007student\030\003 \001(\0132\021.protob" +
+      "uf.StudentH\000\022\034\n\003god\030\004 \001(\0132\r.protobuf.God" +
+      "H\000\"<\n\010DataType\022\020\n\014TEACHER_TYPE\020\001\022\020\n\014STUD" +
+      "ENT_TYPE\020\002\022\014\n\010GOD_TYPE\020\003B\014\n\nObjMessage\"5" +
       "\n\007Teacher\022\014\n\004name\030\001 \002(\t\022\013\n\003age\030\002 \001(\005\022\017\n\007" +
-      "address\030\003 \001(\tB$\n\024com.test.netty.test6B\014T" +
-      "estDataInfo"
+      "address\030\003 \001(\t\"5\n\007Student\022\014\n\004name\030\001 \001(\t\022\013" +
+      "\n\003age\030\002 \001(\005\022\017\n\007address\030\003 \001(\t\"1\n\003God\022\014\n\004n",
+      "ame\030\001 \001(\t\022\013\n\003age\030\002 \001(\005\022\017\n\007address\030\003 \001(\tB" +
+      "$\n\024com.test.netty.test6B\014TestDataInfo"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -859,11 +3821,29 @@ public final class TestDataInfo {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_protobuf_Teacher_descriptor =
+    internal_static_protobuf_MyMessage_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_protobuf_MyMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_protobuf_MyMessage_descriptor,
+        new java.lang.String[] { "Type", "Teacher", "Student", "God", "ObjMessage", });
+    internal_static_protobuf_Teacher_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_protobuf_Teacher_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protobuf_Teacher_descriptor,
+        new java.lang.String[] { "Name", "Age", "Address", });
+    internal_static_protobuf_Student_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_protobuf_Student_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_protobuf_Student_descriptor,
+        new java.lang.String[] { "Name", "Age", "Address", });
+    internal_static_protobuf_God_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_protobuf_God_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_protobuf_God_descriptor,
         new java.lang.String[] { "Name", "Age", "Address", });
   }
 

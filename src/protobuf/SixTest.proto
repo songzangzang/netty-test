@@ -5,8 +5,48 @@ package protobuf;
 option java_package = "com.test.netty.test6";
 option java_outer_classname = "TestDataInfo";
 
+message MyMessage {
+
+    enum DataType {
+
+        TEACHER_TYPE = 1;
+        STUDENT_TYPE = 2;
+        GOD_TYPE = 3;
+
+    }
+
+    required DataType type = 1;
+
+    oneof ObjMessage {
+
+        Teacher teacher = 2;
+        Student student = 3;
+        God god = 4;
+
+    }
+
+}
+
 message Teacher {
+
     required string name = 1;
     optional int32 age = 2;
     optional string address = 3;
+
+}
+
+message Student {
+
+    optional string name = 1;
+    optional int32 age = 2;
+    optional string address = 3;
+
+}
+
+message God {
+
+    optional string name = 1;
+    optional int32 age = 2;
+    optional string address = 3;
+
 }
