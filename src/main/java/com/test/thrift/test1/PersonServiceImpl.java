@@ -1,4 +1,4 @@
-package com.test.thrift;
+package com.test.thrift.test1;
 
 import com.test.thrift.generated.DataException;
 import com.test.thrift.generated.Person;

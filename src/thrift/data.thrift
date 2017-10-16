@@ -12,6 +12,13 @@ struct Person {
     3:optional boolean married
 }
 
+struct God {
+    1:optional String name,
+    2:optional String job,
+    3:optional int age,
+    4:optional list<Person> personArray
+}
+
 exception DataException {
     1:optional String message,
     2:optional String callStack,
@@ -21,4 +28,10 @@ exception DataException {
 service PersonService {
     Person getPersonByUsername(1:required String username) throws (1:DataException dataException),
     void savePerson(1:required Person person) throws (1:DataException dataException)
+}
+
+service GodService {
+    God getGodBySky(1:required String name),
+    void createGod(1:required God god),
+    void createPersonByGod (1:required list<Person> peronArray)
 }
