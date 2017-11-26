@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package proto;
+
+option java_package = "";
+option java_outer_classname = "Student";
+
+service Greeter {
+
+    rpc SayHello (HelloRequest) returns (HelloReponse) {};
+
+}
+
+message HelloRequest {
+     string name = 1;
+     string message = 2;
+}
+
+
+message HelloReponse {
+    string message = 1;
+}

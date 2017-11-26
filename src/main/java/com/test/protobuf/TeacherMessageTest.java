@@ -1,6 +1,5 @@
 package com.test.protobuf;
 
-import sun.jvm.hotspot.oops.ExceptionTableElement;
 
 public class TeacherMessageTest {
 
