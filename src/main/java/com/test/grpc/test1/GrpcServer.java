@@ -22,16 +22,26 @@ public class GrpcServer {
 
         server = ServerBuilder.forPort(port).addService(new GreeterImpl()).build().start();
 
+        // jvm回调钩子
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+
+            System.out.println("jvm 关闭");
+
+            shundown();
+
+        }));
+
+
         System.out.println("服务端启动...");
 
     }
 
     /**
-     * 无响应时退出
+     * 等待阻塞
      *
      * @throws Exception
      */
-    private void blockUntilShutdown() throws Exception {
+    private void await() throws Exception {
 
         if (server != null) {
             server.awaitTermination();
@@ -39,12 +49,22 @@ public class GrpcServer {
 
     }
 
-    public static void main(String[] args) throws Exception{
+    private void shundown() {
+
+        if (server != null) {
+
+            server.shutdown();
+
+        }
+
+    }
+
+    public static void main(String[] args) throws Exception {
 
         GrpcServer server = new GrpcServer();
 
         server.start();
-        server.blockUntilShutdown();
+        server.await();
 
     }
 
