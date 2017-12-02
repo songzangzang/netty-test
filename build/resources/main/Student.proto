@@ -7,13 +7,15 @@ option java_outer_classname = "Student";
 
 service Greeter {
 
-    rpc SayHello (HelloRequest) returns (HelloReponse) {};
+    rpc SayHello (HelloRequest) returns (HelloReponse){};
+
+    rpc SayServerStreamHello (HelloRequest) returns (stream HelloReponse){};
 
 }
 
 message HelloRequest {
-     string name = 1;
-     string message = 2;
+    string name = 1;
+    string message = 2;
 }
 
 

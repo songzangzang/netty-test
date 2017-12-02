@@ -40,6 +40,19 @@ public final class GreeterGrpc {
               Student.HelloReponse.getDefaultInstance()))
           .setSchemaDescriptor(new GreeterMethodDescriptorSupplier("SayHello"))
           .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<Student.HelloRequest,
+      Student.HelloReponse> METHOD_SAY_SERVER_STREAM_HELLO =
+      io.grpc.MethodDescriptor.<Student.HelloRequest, Student.HelloReponse>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+          .setFullMethodName(generateFullMethodName(
+              "proto.Greeter", "SayServerStreamHello"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              Student.HelloRequest.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              Student.HelloReponse.getDefaultInstance()))
+          .setSchemaDescriptor(new GreeterMethodDescriptorSupplier("SayServerStreamHello"))
+          .build();
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -75,6 +88,13 @@ public final class GreeterGrpc {
       asyncUnimplementedUnaryCall(METHOD_SAY_HELLO, responseObserver);
     }
 
+    /**
+     */
+    public void sayServerStreamHello(Student.HelloRequest request,
+        io.grpc.stub.StreamObserver<Student.HelloReponse> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_SAY_SERVER_STREAM_HELLO, responseObserver);
+    }
+
     @Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -84,6 +104,13 @@ public final class GreeterGrpc {
                 Student.HelloRequest,
                 Student.HelloReponse>(
                   this, METHODID_SAY_HELLO)))
+          .addMethod(
+            METHOD_SAY_SERVER_STREAM_HELLO,
+            asyncServerStreamingCall(
+              new MethodHandlers<
+                Student.HelloRequest,
+                Student.HelloReponse>(
+                  this, METHODID_SAY_SERVER_STREAM_HELLO)))
           .build();
     }
   }
@@ -113,6 +140,14 @@ public final class GreeterGrpc {
       asyncUnaryCall(
           getChannel().newCall(METHOD_SAY_HELLO, getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void sayServerStreamHello(Student.HelloRequest request,
+        io.grpc.stub.StreamObserver<Student.HelloReponse> responseObserver) {
+      asyncServerStreamingCall(
+          getChannel().newCall(METHOD_SAY_SERVER_STREAM_HELLO, getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -138,6 +173,14 @@ public final class GreeterGrpc {
     public Student.HelloReponse sayHello(Student.HelloRequest request) {
       return blockingUnaryCall(
           getChannel(), METHOD_SAY_HELLO, getCallOptions(), request);
+    }
+
+    /**
+     */
+    public java.util.Iterator<Student.HelloReponse> sayServerStreamHello(
+        Student.HelloRequest request) {
+      return blockingServerStreamingCall(
+          getChannel(), METHOD_SAY_SERVER_STREAM_HELLO, getCallOptions(), request);
     }
   }
 
@@ -169,6 +212,7 @@ public final class GreeterGrpc {
   }
 
   private static final int METHODID_SAY_HELLO = 0;
+  private static final int METHODID_SAY_SERVER_STREAM_HELLO = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -189,6 +233,10 @@ public final class GreeterGrpc {
       switch (methodId) {
         case METHODID_SAY_HELLO:
           serviceImpl.sayHello((Student.HelloRequest) request,
+              (io.grpc.stub.StreamObserver<Student.HelloReponse>) responseObserver);
+          break;
+        case METHODID_SAY_SERVER_STREAM_HELLO:
+          serviceImpl.sayServerStreamHello((Student.HelloRequest) request,
               (io.grpc.stub.StreamObserver<Student.HelloReponse>) responseObserver);
           break;
         default:
@@ -253,6 +301,7 @@ public final class GreeterGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new GreeterFileDescriptorSupplier())
               .addMethod(METHOD_SAY_HELLO)
+              .addMethod(METHOD_SAY_SERVER_STREAM_HELLO)
               .build();
         }
       }

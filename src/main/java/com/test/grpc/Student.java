@@ -1214,9 +1214,11 @@ public final class Student {
     String[] descriptorData = {
       "\n\rStudent.proto\022\005proto\"-\n\014HelloRequest\022\014" +
       "\n\004name\030\001 \001(\t\022\017\n\007message\030\002 \001(\t\"\037\n\014HelloRe" +
-      "ponse\022\017\n\007message\030\001 \001(\t2A\n\007Greeter\0226\n\010Say" +
-      "Hello\022\023.proto.HelloRequest\032\023.proto.Hello" +
-      "Reponse\"\000B\013\n\000B\007Studentb\006proto3"
+      "ponse\022\017\n\007message\030\001 \001(\t2\207\001\n\007Greeter\0226\n\010Sa" +
+      "yHello\022\023.proto.HelloRequest\032\023.proto.Hell" +
+      "oReponse\"\000\022D\n\024SayServerStreamHello\022\023.pro" +
+      "to.HelloRequest\032\023.proto.HelloReponse\"\0000\001" +
+      "B\013\n\000B\007Studentb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
