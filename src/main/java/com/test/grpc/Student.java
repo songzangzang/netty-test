@@ -671,8 +671,8 @@ public final class Student {
 
   }
 
-  public interface HelloReponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:proto.HelloReponse)
+  public interface HelloResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:proto.HelloResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -686,18 +686,18 @@ public final class Student {
         getMessageBytes();
   }
   /**
-   * Protobuf type {@code proto.HelloReponse}
+   * Protobuf type {@code proto.HelloResponse}
    */
-  public  static final class HelloReponse extends
+  public  static final class HelloResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:proto.HelloReponse)
-      HelloReponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:proto.HelloResponse)
+      HelloResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use HelloReponse.newBuilder() to construct.
-    private HelloReponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use HelloResponse.newBuilder() to construct.
+    private HelloResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private HelloReponse() {
+    private HelloResponse() {
       message_ = "";
     }
 
@@ -706,7 +706,7 @@ public final class Student {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private HelloReponse(
+    private HelloResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -749,14 +749,14 @@ public final class Student {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return Student.internal_static_proto_HelloReponse_descriptor;
+      return Student.internal_static_proto_HelloResponse_descriptor;
     }
 
     protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Student.internal_static_proto_HelloReponse_fieldAccessorTable
+      return Student.internal_static_proto_HelloResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              HelloReponse.class, Builder.class);
+              HelloResponse.class, Builder.class);
     }
 
     public static final int MESSAGE_FIELD_NUMBER = 1;
@@ -829,10 +829,10 @@ public final class Student {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof HelloReponse)) {
+      if (!(obj instanceof HelloResponse)) {
         return super.equals(obj);
       }
-      HelloReponse other = (HelloReponse) obj;
+      HelloResponse other = (HelloResponse) obj;
 
       boolean result = true;
       result = result && getMessage()
@@ -855,69 +855,69 @@ public final class Student {
       return hash;
     }
 
-    public static HelloReponse parseFrom(
+    public static HelloResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static HelloReponse parseFrom(
+    public static HelloResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static HelloReponse parseFrom(
+    public static HelloResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static HelloReponse parseFrom(
+    public static HelloResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static HelloReponse parseFrom(byte[] data)
+    public static HelloResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static HelloReponse parseFrom(
+    public static HelloResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static HelloReponse parseFrom(java.io.InputStream input)
+    public static HelloResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static HelloReponse parseFrom(
+    public static HelloResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static HelloReponse parseDelimitedFrom(java.io.InputStream input)
+    public static HelloResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static HelloReponse parseDelimitedFrom(
+    public static HelloResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static HelloReponse parseFrom(
+    public static HelloResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static HelloReponse parseFrom(
+    public static HelloResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -929,7 +929,7 @@ public final class Student {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(HelloReponse prototype) {
+    public static Builder newBuilder(HelloResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -944,25 +944,25 @@ public final class Student {
       return builder;
     }
     /**
-     * Protobuf type {@code proto.HelloReponse}
+     * Protobuf type {@code proto.HelloResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:proto.HelloReponse)
-        HelloReponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:proto.HelloResponse)
+        HelloResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return Student.internal_static_proto_HelloReponse_descriptor;
+        return Student.internal_static_proto_HelloResponse_descriptor;
       }
 
       protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Student.internal_static_proto_HelloReponse_fieldAccessorTable
+        return Student.internal_static_proto_HelloResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                HelloReponse.class, Builder.class);
+                HelloResponse.class, Builder.class);
       }
 
-      // Construct using Student.HelloReponse.newBuilder()
+      // Construct using Student.HelloResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -986,23 +986,23 @@ public final class Student {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Student.internal_static_proto_HelloReponse_descriptor;
+        return Student.internal_static_proto_HelloResponse_descriptor;
       }
 
-      public HelloReponse getDefaultInstanceForType() {
-        return HelloReponse.getDefaultInstance();
+      public HelloResponse getDefaultInstanceForType() {
+        return HelloResponse.getDefaultInstance();
       }
 
-      public HelloReponse build() {
-        HelloReponse result = buildPartial();
+      public HelloResponse build() {
+        HelloResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public HelloReponse buildPartial() {
-        HelloReponse result = new HelloReponse(this);
+      public HelloResponse buildPartial() {
+        HelloResponse result = new HelloResponse(this);
         result.message_ = message_;
         onBuilt();
         return result;
@@ -1035,16 +1035,16 @@ public final class Student {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof HelloReponse) {
-          return mergeFrom((HelloReponse)other);
+        if (other instanceof HelloResponse) {
+          return mergeFrom((HelloResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(HelloReponse other) {
-        if (other == HelloReponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(HelloResponse other) {
+        if (other == HelloResponse.getDefaultInstance()) return this;
         if (!other.getMessage().isEmpty()) {
           message_ = other.message_;
           onChanged();
@@ -1062,11 +1062,11 @@ public final class Student {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        HelloReponse parsedMessage = null;
+        HelloResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (HelloReponse) e.getUnfinishedMessage();
+          parsedMessage = (HelloResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1155,39 +1155,39 @@ public final class Student {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:proto.HelloReponse)
+      // @@protoc_insertion_point(builder_scope:proto.HelloResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:proto.HelloReponse)
-    private static final HelloReponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:proto.HelloResponse)
+    private static final HelloResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new HelloReponse();
+      DEFAULT_INSTANCE = new HelloResponse();
     }
 
-    public static HelloReponse getDefaultInstance() {
+    public static HelloResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<HelloReponse>
-        PARSER = new com.google.protobuf.AbstractParser<HelloReponse>() {
-      public HelloReponse parsePartialFrom(
+    private static final com.google.protobuf.Parser<HelloResponse>
+        PARSER = new com.google.protobuf.AbstractParser<HelloResponse>() {
+      public HelloResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new HelloReponse(input, extensionRegistry);
+          return new HelloResponse(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<HelloReponse> parser() {
+    public static com.google.protobuf.Parser<HelloResponse> parser() {
       return PARSER;
     }
 
     @Override
-    public com.google.protobuf.Parser<HelloReponse> getParserForType() {
+    public com.google.protobuf.Parser<HelloResponse> getParserForType() {
       return PARSER;
     }
 
-    public HelloReponse getDefaultInstanceForType() {
+    public HelloResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1199,10 +1199,10 @@ public final class Student {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_proto_HelloRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_HelloReponse_descriptor;
+    internal_static_proto_HelloResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_HelloReponse_fieldAccessorTable;
+      internal_static_proto_HelloResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1213,12 +1213,16 @@ public final class Student {
   static {
     String[] descriptorData = {
       "\n\rStudent.proto\022\005proto\"-\n\014HelloRequest\022\014" +
-      "\n\004name\030\001 \001(\t\022\017\n\007message\030\002 \001(\t\"\037\n\014HelloRe" +
-      "ponse\022\017\n\007message\030\001 \001(\t2\207\001\n\007Greeter\0226\n\010Sa" +
-      "yHello\022\023.proto.HelloRequest\032\023.proto.Hell" +
-      "oReponse\"\000\022D\n\024SayServerStreamHello\022\023.pro" +
-      "to.HelloRequest\032\023.proto.HelloReponse\"\0000\001" +
-      "B\013\n\000B\007Studentb\006proto3"
+      "\n\004name\030\001 \001(\t\022\017\n\007message\030\002 \001(\t\" \n\rHelloRe" +
+      "sponse\022\017\n\007message\030\001 \001(\t2\225\002\n\007Greeter\0227\n\010S" +
+      "ayHello\022\023.proto.HelloRequest\032\024.proto.Hel" +
+      "loResponse\"\000\022E\n\024SayServerStreamHello\022\023.p" +
+      "roto.HelloRequest\032\024.proto.HelloResponse\"" +
+      "\0000\001\022E\n\024SayClientStreamHello\022\023.proto.Hell" +
+      "oRequest\032\024.proto.HelloResponse\"\000(\001\022C\n\020st" +
+      "reamConnection\022\023.proto.HelloRequest\032\024.pr" +
+      "oto.HelloResponse\"\000(\0010\001B\013\n\000B\007Studentb\006pr",
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1238,11 +1242,11 @@ public final class Student {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_HelloRequest_descriptor,
         new String[] { "Name", "Message", });
-    internal_static_proto_HelloReponse_descriptor =
+    internal_static_proto_HelloResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_proto_HelloReponse_fieldAccessorTable = new
+    internal_static_proto_HelloResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_HelloReponse_descriptor,
+        internal_static_proto_HelloResponse_descriptor,
         new String[] { "Message", });
   }
 

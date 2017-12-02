@@ -1,5 +1,6 @@
 package com.test.grpc.test1;
 
+import com.test.grpc.GreeterImpl;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 
@@ -11,6 +12,7 @@ import io.grpc.ServerBuilder;
 public class GrpcServer {
 
     private int port = 9999;
+
     private Server server;
 
     /**
@@ -67,6 +69,5 @@ public class GrpcServer {
         server.await();
 
     }
-
 
 }

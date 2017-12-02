@@ -1,7 +1,6 @@
 package com.test.grpc.test1;
 
 import com.test.grpc.GreeterGrpc;
-import com.test.grpc.Student;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 
@@ -41,43 +40,16 @@ public class GrpcClient {
         HelloRequest request = HelloRequest.newBuilder()
                 .setName(name).setMessage(message).build();
 
-        HelloReponse reponse;
+        HelloResponse response;
 
         try {
 
-            reponse = blockingStub.sayHello(request);
-            System.out.println("服务端响应 " + reponse.getMessage());
+            response = blockingStub.sayHello(request);
+            System.out.println("服务端响应 " + response.getMessage());
 
         } catch (Exception e) {
 
             throw new RuntimeException("grpc client failure{}", e);
-
-        }
-
-    }
-
-    /**
-     * 传入对象并返回一个流
-     *
-     * @param name    对象名称
-     * @param message 对象信息
-     */
-    public void callServerStream(String name, String message) {
-
-        HelloRequest request = HelloRequest.newBuilder()
-                .setName(name).setMessage(message).build();
-
-        HelloReponse reponse;
-
-        try {
-
-            Iterator<HelloReponse> helloArray = blockingStub.sayServerStreamHello(request);
-
-            Optional.ofNullable(helloArray).ifPresent(array -> array.forEachRemaining(h -> System.out.println(h)));
-
-        } catch (Exception e) {
-
-            throw new RuntimeException("grpc client stream failure{}", e);
 
         }
 
@@ -89,8 +61,6 @@ public class GrpcClient {
         GrpcClient client = new GrpcClient("localhost", 9999);
 
         client.callServer("卡尔大魔王", "great!");
-
-        client.callServerStream("卡尔大魔王1", "hello");
 
     }
 
