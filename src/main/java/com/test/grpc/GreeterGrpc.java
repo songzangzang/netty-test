@@ -24,59 +24,59 @@ public final class GreeterGrpc {
 
   private GreeterGrpc() {}
 
-  public static final String SERVICE_NAME = "proto.Greeter";
+  public static final String SERVICE_NAME = "com.test.grpc.Greeter";
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<Student.HelloRequest,
-      Student.HelloResponse> METHOD_SAY_HELLO =
-      io.grpc.MethodDescriptor.<Student.HelloRequest, Student.HelloResponse>newBuilder()
+  public static final io.grpc.MethodDescriptor<com.test.grpc.Student.HelloRequest,
+      com.test.grpc.Student.HelloResponse> METHOD_SAY_HELLO =
+      io.grpc.MethodDescriptor.<com.test.grpc.Student.HelloRequest, com.test.grpc.Student.HelloResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "proto.Greeter", "SayHello"))
+              "com.test.grpc.Greeter", "SayHello"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              Student.HelloRequest.getDefaultInstance()))
+              com.test.grpc.Student.HelloRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              Student.HelloResponse.getDefaultInstance()))
+              com.test.grpc.Student.HelloResponse.getDefaultInstance()))
           .setSchemaDescriptor(new GreeterMethodDescriptorSupplier("SayHello"))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<Student.HelloRequest,
-      Student.HelloResponse> METHOD_SAY_SERVER_STREAM_HELLO =
-      io.grpc.MethodDescriptor.<Student.HelloRequest, Student.HelloResponse>newBuilder()
+  public static final io.grpc.MethodDescriptor<com.test.grpc.Student.HelloRequest,
+      com.test.grpc.Student.HelloResponse> METHOD_SAY_SERVER_STREAM_HELLO =
+      io.grpc.MethodDescriptor.<com.test.grpc.Student.HelloRequest, com.test.grpc.Student.HelloResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
           .setFullMethodName(generateFullMethodName(
-              "proto.Greeter", "SayServerStreamHello"))
+              "com.test.grpc.Greeter", "SayServerStreamHello"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              Student.HelloRequest.getDefaultInstance()))
+              com.test.grpc.Student.HelloRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              Student.HelloResponse.getDefaultInstance()))
+              com.test.grpc.Student.HelloResponse.getDefaultInstance()))
           .setSchemaDescriptor(new GreeterMethodDescriptorSupplier("SayServerStreamHello"))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<Student.HelloRequest,
-      Student.HelloResponse> METHOD_SAY_CLIENT_STREAM_HELLO =
-      io.grpc.MethodDescriptor.<Student.HelloRequest, Student.HelloResponse>newBuilder()
+  public static final io.grpc.MethodDescriptor<com.test.grpc.Student.HelloRequest,
+      com.test.grpc.Student.HelloResponse> METHOD_SAY_CLIENT_STREAM_HELLO =
+      io.grpc.MethodDescriptor.<com.test.grpc.Student.HelloRequest, com.test.grpc.Student.HelloResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
           .setFullMethodName(generateFullMethodName(
-              "proto.Greeter", "SayClientStreamHello"))
+              "com.test.grpc.Greeter", "SayClientStreamHello"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              Student.HelloRequest.getDefaultInstance()))
+              com.test.grpc.Student.HelloRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              Student.HelloResponse.getDefaultInstance()))
+              com.test.grpc.Student.HelloResponse.getDefaultInstance()))
           .setSchemaDescriptor(new GreeterMethodDescriptorSupplier("SayClientStreamHello"))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<Student.HelloRequest,
-      Student.HelloResponse> METHOD_STREAM_CONNECTION =
-      io.grpc.MethodDescriptor.<Student.HelloRequest, Student.HelloResponse>newBuilder()
+  public static final io.grpc.MethodDescriptor<com.test.grpc.Student.HelloRequest,
+      com.test.grpc.Student.HelloResponse> METHOD_STREAM_CONNECTION =
+      io.grpc.MethodDescriptor.<com.test.grpc.Student.HelloRequest, com.test.grpc.Student.HelloResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
           .setFullMethodName(generateFullMethodName(
-              "proto.Greeter", "streamConnection"))
+              "com.test.grpc.Greeter", "streamConnection"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              Student.HelloRequest.getDefaultInstance()))
+              com.test.grpc.Student.HelloRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              Student.HelloResponse.getDefaultInstance()))
+              com.test.grpc.Student.HelloResponse.getDefaultInstance()))
           .setSchemaDescriptor(new GreeterMethodDescriptorSupplier("streamConnection"))
           .build();
 
@@ -109,61 +109,61 @@ public final class GreeterGrpc {
 
     /**
      */
-    public void sayHello(Student.HelloRequest request,
-        io.grpc.stub.StreamObserver<Student.HelloResponse> responseObserver) {
+    public void sayHello(com.test.grpc.Student.HelloRequest request,
+        io.grpc.stub.StreamObserver<com.test.grpc.Student.HelloResponse> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_SAY_HELLO, responseObserver);
     }
 
     /**
      */
-    public void sayServerStreamHello(Student.HelloRequest request,
-        io.grpc.stub.StreamObserver<Student.HelloResponse> responseObserver) {
+    public void sayServerStreamHello(com.test.grpc.Student.HelloRequest request,
+        io.grpc.stub.StreamObserver<com.test.grpc.Student.HelloResponse> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_SAY_SERVER_STREAM_HELLO, responseObserver);
     }
 
     /**
      */
-    public io.grpc.stub.StreamObserver<Student.HelloRequest> sayClientStreamHello(
-        io.grpc.stub.StreamObserver<Student.HelloResponse> responseObserver) {
+    public io.grpc.stub.StreamObserver<com.test.grpc.Student.HelloRequest> sayClientStreamHello(
+        io.grpc.stub.StreamObserver<com.test.grpc.Student.HelloResponse> responseObserver) {
       return asyncUnimplementedStreamingCall(METHOD_SAY_CLIENT_STREAM_HELLO, responseObserver);
     }
 
     /**
      */
-    public io.grpc.stub.StreamObserver<Student.HelloRequest> streamConnection(
-        io.grpc.stub.StreamObserver<Student.HelloResponse> responseObserver) {
+    public io.grpc.stub.StreamObserver<com.test.grpc.Student.HelloRequest> streamConnection(
+        io.grpc.stub.StreamObserver<com.test.grpc.Student.HelloResponse> responseObserver) {
       return asyncUnimplementedStreamingCall(METHOD_STREAM_CONNECTION, responseObserver);
     }
 
-    @Override public final io.grpc.ServerServiceDefinition bindService() {
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             METHOD_SAY_HELLO,
             asyncUnaryCall(
               new MethodHandlers<
-                Student.HelloRequest,
-                Student.HelloResponse>(
+                com.test.grpc.Student.HelloRequest,
+                com.test.grpc.Student.HelloResponse>(
                   this, METHODID_SAY_HELLO)))
           .addMethod(
             METHOD_SAY_SERVER_STREAM_HELLO,
             asyncServerStreamingCall(
               new MethodHandlers<
-                Student.HelloRequest,
-                Student.HelloResponse>(
+                com.test.grpc.Student.HelloRequest,
+                com.test.grpc.Student.HelloResponse>(
                   this, METHODID_SAY_SERVER_STREAM_HELLO)))
           .addMethod(
             METHOD_SAY_CLIENT_STREAM_HELLO,
             asyncClientStreamingCall(
               new MethodHandlers<
-                Student.HelloRequest,
-                Student.HelloResponse>(
+                com.test.grpc.Student.HelloRequest,
+                com.test.grpc.Student.HelloResponse>(
                   this, METHODID_SAY_CLIENT_STREAM_HELLO)))
           .addMethod(
             METHOD_STREAM_CONNECTION,
             asyncBidiStreamingCall(
               new MethodHandlers<
-                Student.HelloRequest,
-                Student.HelloResponse>(
+                com.test.grpc.Student.HelloRequest,
+                com.test.grpc.Student.HelloResponse>(
                   this, METHODID_STREAM_CONNECTION)))
           .build();
     }
@@ -181,7 +181,7 @@ public final class GreeterGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected GreeterStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new GreeterStub(channel, callOptions);
@@ -189,32 +189,32 @@ public final class GreeterGrpc {
 
     /**
      */
-    public void sayHello(Student.HelloRequest request,
-        io.grpc.stub.StreamObserver<Student.HelloResponse> responseObserver) {
+    public void sayHello(com.test.grpc.Student.HelloRequest request,
+        io.grpc.stub.StreamObserver<com.test.grpc.Student.HelloResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_SAY_HELLO, getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void sayServerStreamHello(Student.HelloRequest request,
-        io.grpc.stub.StreamObserver<Student.HelloResponse> responseObserver) {
+    public void sayServerStreamHello(com.test.grpc.Student.HelloRequest request,
+        io.grpc.stub.StreamObserver<com.test.grpc.Student.HelloResponse> responseObserver) {
       asyncServerStreamingCall(
           getChannel().newCall(METHOD_SAY_SERVER_STREAM_HELLO, getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public io.grpc.stub.StreamObserver<Student.HelloRequest> sayClientStreamHello(
-        io.grpc.stub.StreamObserver<Student.HelloResponse> responseObserver) {
+    public io.grpc.stub.StreamObserver<com.test.grpc.Student.HelloRequest> sayClientStreamHello(
+        io.grpc.stub.StreamObserver<com.test.grpc.Student.HelloResponse> responseObserver) {
       return asyncClientStreamingCall(
           getChannel().newCall(METHOD_SAY_CLIENT_STREAM_HELLO, getCallOptions()), responseObserver);
     }
 
     /**
      */
-    public io.grpc.stub.StreamObserver<Student.HelloRequest> streamConnection(
-        io.grpc.stub.StreamObserver<Student.HelloResponse> responseObserver) {
+    public io.grpc.stub.StreamObserver<com.test.grpc.Student.HelloRequest> streamConnection(
+        io.grpc.stub.StreamObserver<com.test.grpc.Student.HelloResponse> responseObserver) {
       return asyncBidiStreamingCall(
           getChannel().newCall(METHOD_STREAM_CONNECTION, getCallOptions()), responseObserver);
     }
@@ -232,7 +232,7 @@ public final class GreeterGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected GreeterBlockingStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new GreeterBlockingStub(channel, callOptions);
@@ -240,15 +240,15 @@ public final class GreeterGrpc {
 
     /**
      */
-    public Student.HelloResponse sayHello(Student.HelloRequest request) {
+    public com.test.grpc.Student.HelloResponse sayHello(com.test.grpc.Student.HelloRequest request) {
       return blockingUnaryCall(
           getChannel(), METHOD_SAY_HELLO, getCallOptions(), request);
     }
 
     /**
      */
-    public java.util.Iterator<Student.HelloResponse> sayServerStreamHello(
-        Student.HelloRequest request) {
+    public java.util.Iterator<com.test.grpc.Student.HelloResponse> sayServerStreamHello(
+        com.test.grpc.Student.HelloRequest request) {
       return blockingServerStreamingCall(
           getChannel(), METHOD_SAY_SERVER_STREAM_HELLO, getCallOptions(), request);
     }
@@ -266,7 +266,7 @@ public final class GreeterGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected GreeterFutureStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new GreeterFutureStub(channel, callOptions);
@@ -274,8 +274,8 @@ public final class GreeterGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<Student.HelloResponse> sayHello(
-        Student.HelloRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.test.grpc.Student.HelloResponse> sayHello(
+        com.test.grpc.Student.HelloRequest request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_SAY_HELLO, getCallOptions()), request);
     }
@@ -299,34 +299,34 @@ public final class GreeterGrpc {
       this.methodId = methodId;
     }
 
-    @Override
-    @SuppressWarnings("unchecked")
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_SAY_HELLO:
-          serviceImpl.sayHello((Student.HelloRequest) request,
-              (io.grpc.stub.StreamObserver<Student.HelloResponse>) responseObserver);
+          serviceImpl.sayHello((com.test.grpc.Student.HelloRequest) request,
+              (io.grpc.stub.StreamObserver<com.test.grpc.Student.HelloResponse>) responseObserver);
           break;
         case METHODID_SAY_SERVER_STREAM_HELLO:
-          serviceImpl.sayServerStreamHello((Student.HelloRequest) request,
-              (io.grpc.stub.StreamObserver<Student.HelloResponse>) responseObserver);
+          serviceImpl.sayServerStreamHello((com.test.grpc.Student.HelloRequest) request,
+              (io.grpc.stub.StreamObserver<com.test.grpc.Student.HelloResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
       }
     }
 
-    @Override
-    @SuppressWarnings("unchecked")
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_SAY_CLIENT_STREAM_HELLO:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.sayClientStreamHello(
-              (io.grpc.stub.StreamObserver<Student.HelloResponse>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.test.grpc.Student.HelloResponse>) responseObserver);
         case METHODID_STREAM_CONNECTION:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.streamConnection(
-              (io.grpc.stub.StreamObserver<Student.HelloResponse>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.test.grpc.Student.HelloResponse>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -337,12 +337,12 @@ public final class GreeterGrpc {
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     GreeterBaseDescriptorSupplier() {}
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return Student.getDescriptor();
+      return com.test.grpc.Student.getDescriptor();
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
       return getFileDescriptor().findServiceByName("Greeter");
     }
@@ -362,7 +362,7 @@ public final class GreeterGrpc {
       this.methodName = methodName;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
       return getServiceDescriptor().findMethodByName(methodName);
     }

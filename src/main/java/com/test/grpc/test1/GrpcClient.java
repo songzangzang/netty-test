@@ -4,9 +4,6 @@ import com.test.grpc.GreeterGrpc;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 
-import java.util.Iterator;
-import java.util.Optional;
-
 import static com.test.grpc.Student.*;
 
 /**

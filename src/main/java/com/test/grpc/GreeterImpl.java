@@ -1,11 +1,8 @@
 package com.test.grpc;
 
-import com.test.grpc.GreeterGrpc;
-import com.test.grpc.Student;
 import io.grpc.stub.StreamObserver;
 
 import java.time.LocalDateTime;
-import java.util.UUID;
 
 public class GreeterImpl extends GreeterGrpc.GreeterImplBase {
 

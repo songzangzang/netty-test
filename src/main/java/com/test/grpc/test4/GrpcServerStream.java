@@ -1,7 +1,6 @@
 package com.test.grpc.test4;
 
 import com.test.grpc.GreeterImpl;
-import com.test.grpc.test3.GrpcServer;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 

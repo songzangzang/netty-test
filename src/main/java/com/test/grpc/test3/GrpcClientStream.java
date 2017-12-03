@@ -2,7 +2,6 @@ package com.test.grpc.test3;
 
 import com.test.grpc.GreeterGrpc;
 import com.test.grpc.Student;
-import com.test.grpc.test2.GrpcClient;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.stub.StreamObserver;

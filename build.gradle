@@ -40,6 +40,10 @@ buildscript {
 }
 
 protobuf {
+
+    // 配置生成grpc文件的跟目录
+    generatedFilesBaseDir = "$projectDir/src"
+
     protoc {
         artifact = "com.google.protobuf:protoc:3.4.0"
     }
@@ -50,7 +54,9 @@ protobuf {
     }
     generateProtoTasks {
         all()*.plugins {
-            grpc {}
+            grpc {
+                outputSubDir = 'java'
+            }
         }
     }
 }
