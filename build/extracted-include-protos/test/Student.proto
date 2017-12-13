@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package proto;
+package com.test.grpc;
 
-option java_package = "";
+option java_package = "com.test.grpc";
 option java_outer_classname = "Student";
 
 service Greeter {
