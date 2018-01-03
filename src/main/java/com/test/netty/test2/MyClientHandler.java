@@ -12,7 +12,7 @@ public class MyClientHandler extends SimpleChannelInboundHandler<String> {
     protected void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
 
         System.out.println(msg);
-        ctx.writeAndFlush("cliect " + UUID.randomUUID());
+        ctx.writeAndFlush("client " + UUID.randomUUID());
 
     }
 

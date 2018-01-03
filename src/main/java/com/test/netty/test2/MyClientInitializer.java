@@ -14,6 +14,7 @@ public class MyClientInitializer extends ChannelInitializer<SocketChannel>{
 
         ChannelPipeline pipeline = ch.pipeline();
         pipeline.addLast("httpServerCodec", new HttpServerCodec());
-        pipeline.addLast("testHttpServerHander", new MyClientHandler());
+        pipeline.addLast("testHttpServerHandler", new MyClientHandler());
+
     }
 }
