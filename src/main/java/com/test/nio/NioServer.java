@@ -70,26 +70,35 @@ public class NioServer {
 
                     }
 
+
                 } else if (key.isReadable()) {
 
                     SocketChannel channel = (SocketChannel) key.channel();
-                    ByteBuffer buffer = ByteBuffer.allocate(1024);
+                    ByteBuffer readBuffer = ByteBuffer.allocate(1024);
 
                     try {
 
-                        int read = channel.read(buffer);
+                        int read = channel.read(readBuffer);
                         if (read > 0) {
 
-                            buffer.flip();
-
+                            readBuffer.flip();
                             Charset charset = Charset.forName("utf-8");
-                            String message = String.valueOf(charset.decode(buffer).array());
-                            System.out.println("客户端请求信息 " + message);
+                            String sendMessage = String.valueOf(charset.decode(readBuffer).array());
+                            System.out.println(channel + sendMessage);
 
+                            final String[] senderKey = new String[1];
                             map.forEach((k, v) -> {
-                                buffer.flip();
+                                if (channel == v) {
+                                    senderKey[0] = k;
+                                }
+                            });
+
+                            ByteBuffer writeBuffer = ByteBuffer.allocate(1024);
+                            writeBuffer.put((senderKey[0] + ":" +sendMessage).getBytes());
+                            map.forEach((k, v) -> {
+                                writeBuffer.flip();
                                 try {
-                                    v.write(buffer);
+                                    v.write(writeBuffer);
                                 } catch (IOException e) {
                                     e.printStackTrace();
                                 }
@@ -97,13 +106,13 @@ public class NioServer {
 
                         }
 
+                        iterator.remove();
+
                     } catch (IOException e) {
 
                         System.out.println("读取信息失败");
 
                     }
-
-                    iterator.remove();
 
                 }
 
