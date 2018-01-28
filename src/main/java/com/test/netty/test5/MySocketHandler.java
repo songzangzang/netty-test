@@ -39,4 +39,5 @@ public class MySocketHandler extends SimpleChannelInboundHandler<TextWebSocketFr
         ctx.channel().close();
 
     }
+
 }

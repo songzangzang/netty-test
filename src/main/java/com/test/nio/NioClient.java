@@ -47,10 +47,12 @@ public class NioClient {
 
                 final SelectionKey key = iterator.next();
 
+                // 是否连接
                 if (key.isConnectable()) {
 
                     SocketChannel channel = (SocketChannel) key.channel();
 
+                    // 是否在连接中
                     if (channel.isConnectionPending()) {
 
                         try {
@@ -67,6 +69,7 @@ public class NioClient {
                             executorService.submit(() -> {
                                 while (true) {
                                     try {
+
                                         writeBuffer.clear();
                                         InputStreamReader inputStreamReader = new InputStreamReader(System.in);
                                         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
