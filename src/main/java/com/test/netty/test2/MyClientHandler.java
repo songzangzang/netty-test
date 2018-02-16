@@ -4,6 +4,7 @@ import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 public class MyClientHandler extends SimpleChannelInboundHandler<String> {
@@ -16,4 +17,18 @@ public class MyClientHandler extends SimpleChannelInboundHandler<String> {
 
     }
 
+    @Override
+    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+
+        ctx.writeAndFlush("我所在的时间为" + LocalDateTime.now());
+
+    }
+
+    @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+
+        cause.printStackTrace();
+        ctx.close();
+
+    }
 }
