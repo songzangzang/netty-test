@@ -38,6 +38,7 @@ public class FutureTest {
 
         System.out.println(restult2.get());
         System.out.println(restult1.get());
+
     }
 
 }

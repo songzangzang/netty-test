@@ -10,7 +10,7 @@ import io.netty.util.concurrent.GlobalEventExecutor;
 public class MyChatServerHandler extends SimpleChannelInboundHandler<String> {
 
     /**
-     * 用来保存Channle对象
+     * 用来保存Channel对象
      */
     private static ChannelGroup channelGroup = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
 
