@@ -12,7 +12,9 @@ package com.test.netty.http;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
+import io.netty.handler.codec.http.HttpClientCodec;
 import io.netty.handler.codec.http.HttpObjectAggregator;
+import io.netty.handler.codec.http.HttpResponseEncoder;
 import io.netty.handler.codec.http.HttpServerCodec;
 
 /**
@@ -26,7 +28,8 @@ public class NettyInitializer extends ChannelInitializer{
         
         ChannelPipeline pipeline = channel.pipeline();
         
-        pipeline.addLast(new HttpServerCodec());
+    pipeline.addLast(new HttpClientCodec());
+        pipeline.addLast(new HttpResponseEncoder());
         pipeline.addLast(new HttpObjectAggregator(1048576));
         pipeline.addLast(new NettyHandler());
         

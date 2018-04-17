@@ -9,6 +9,7 @@
 
 package com.test.netty.http;
 
+import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
@@ -22,12 +23,12 @@ import java.net.URI;
  * @author songxibo 
  * @date 2018年4月2日 下午5:35:27
  */
-public class NettyHandler extends SimpleChannelInboundHandler<Object>{
+public class NettyHandler extends SimpleChannelInboundHandler<HttpObject>{
 
     @Override
-    protected void channelRead0(ChannelHandlerContext ct, Object arg1) throws Exception {
+    protected void channelRead0(ChannelHandlerContext ct, HttpObject arg1) throws Exception {
 
-        System.out.println(arg1);
+        System.out.println(arg1.getClass().getName());
 
         if (arg1 instanceof HttpResponse) {
 
@@ -49,18 +50,26 @@ public class NettyHandler extends SimpleChannelInboundHandler<Object>{
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
 
         System.out.println("连接 HTTP 服务器");
-        URI uri = new URI("http://172.0.0.1:8899");
 
-        String str = "client test message";
+        URI uri = new URI("http://127.0.0.1:8899");
+        String msg = "Are you ok?";
+        DefaultFullHttpRequest request = new DefaultFullHttpRequest(
+                HttpVersion.HTTP_1_1, HttpMethod.POST, uri.toASCIIString(),
+                Unpooled.wrappedBuffer(msg.getBytes()));
+        // 构建http请求
+        request.headers().set(HttpHeaderNames.HOST, "http://127.0.0.1");
+        request.headers().set(HttpHeaderNames.CONTENT_LENGTH, request.content().readableBytes());
 
-        FullHttpRequest request = new DefaultFullHttpRequest(HttpVersion.HTTP_1_1, HttpMethod.GET, uri.toASCIIString(), Unpooled.copiedBuffer(str.getBytes(CharsetUtil.UTF_8)));
-        request.headers().set(HttpHeaderNames.HOST, InetAddress.getLocalHost());
-        request.headers().set(HttpHeaderNames.CONNECTION, HttpHeaders.Values.CLOSE);
-        request.headers().set(HttpHeaderNames.ACCEPT_LANGUAGE, str.length());
-        request.headers().set(HttpHeaderNames.CONNECTION, HttpHeaders.Values.KEEP_ALIVE);
+        // 发送http请求
+        ctx.writeAndFlush(request);
 
-        ctx.channel().writeAndFlush(request);
-                
+    }
+
+
+    @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
+        cause.printStackTrace();
+        ctx.close();
     }
 
 }
