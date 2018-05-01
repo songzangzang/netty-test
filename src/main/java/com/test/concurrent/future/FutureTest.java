@@ -1,4 +1,4 @@
-package com.test.concurrent;
+package com.test.concurrent.future;
 
 import java.util.concurrent.*;
 
