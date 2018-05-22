@@ -7,10 +7,10 @@ import io.netty.handler.codec.http.HttpServerCodec;
 
 
 /**
- *  对处理器进行初始化
- *  netty的处理器也可以传入自己的处理器进行处理
+ * 对处理器进行初始化
+ * netty的处理器也可以传入自己的处理器进行处理
  */
-public class TestServerInitializer extends ChannelInitializer<SocketChannel>{
+public class TestServerInitializer extends ChannelInitializer<SocketChannel> {
 
     @Override
     protected void initChannel(SocketChannel ch) throws Exception {
