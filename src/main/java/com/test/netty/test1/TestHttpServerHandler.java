@@ -18,7 +18,7 @@ public class TestHttpServerHandler extends SimpleChannelInboundHandler<HttpObjec
 
         System.out.println(msg);
 
-        if (msg instanceof HttpObject) {
+        if (msg instanceof HttpRequest) {
 
             ByteBuf content = Unpooled.copiedBuffer("hello world", CharsetUtil.UTF_8);
             FullHttpResponse response  = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1,
